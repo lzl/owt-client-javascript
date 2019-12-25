@@ -379,7 +379,7 @@ export const ConferenceClient = function(config, signalingImpl) {
           }
         }
         resolve(new ConferenceInfo(resp.room.id, Array.from(participants
-            .values()), Array.from(remoteStreams.values()), me));
+            .values()), Array.from(remoteStreams.values()), me, st.info.activeInput));
       }, (e) => {
         signalingState = SignalingState.READY;
         reject(new ConferenceError(e));

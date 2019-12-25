@@ -12,7 +12,7 @@
  */
 export class ConferenceInfo {
   // eslint-disable-next-line require-jsdoc
-  constructor(id, participants, remoteStreams, myInfo) {
+  constructor(id, participants, remoteStreams, myInfo, activeInput) {
     /**
      * @member {string} id
      * @instance
@@ -40,5 +40,6 @@ export class ConferenceInfo {
      * @memberof Owt.Conference.ConferenceInfo
      */
     this.self = myInfo;
+    this.activeInput = activeInput;
   }
 }
